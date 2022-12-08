@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        table tr td {padding: 10px;}
+        body {font-size: 30px;}
+    </style>
 </head>
 <body>
-<div>
-    <th:block th:each="car : ${cars}">
-        <h1 th:text="${car}"></h1>
-    </th:block>
-</div>
+<table>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.getName()}"></td>
+        <td th:text="${car.getYear()}"></td>
+        <td th:text="${car.getColor()}"></td>
+    </tr>
+</table>
 </body>
 </html>
